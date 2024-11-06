@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waktu Sekarang</title>
+</head>
+<body>
+    <h1 id="header">Waktu akan muncul di sini</h1>
+
+    <script>
+        // Fungsi untuk mengatur waktu
+        function setTime() {
+            const header = document.getElementById("header");
+            header.textContent = new Date().toString();
+        }
+
+        // Memperbarui waktu setiap detik (1000 ms)
+        setInterval(setTime, 2000);
+
+        // Menampilkan pesan di konsol
+        console.log("Program Finish");
+    </script>
+</body>
+</html>

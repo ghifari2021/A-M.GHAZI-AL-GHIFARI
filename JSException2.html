@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fungsi Pembagian dengan Validasi</title>
+</head>
+<body>
+    <h1>Fungsi Pembagian Dua Angka</h1>
+
+    <!-- Form input untuk angka -->
+    <label for="number1">Angka Pertama:</label>
+    <input type="text" id="number1"><br><br>
+    
+    <label for="number2">Angka Kedua:</label>
+    <input type="text" id="number2"><br><br>
+
+    <button onclick="hitungpembagian()">Hitung Pembagian</button>
+
+    <p id="result"></p>
+
+    <script>
+        function bagiduaangka(a, b) {
+            try {
+                a = Number(a);
+                b = Number(b);
+
+                if (isNaN(a) || isNaN(b)) {
+                    throw new Error("Input harus berupa angka.");
+                }
+
+                if (b === 0) {
+                    throw new Error("Pembagian dengan nol tidak diizinkan.");
+                }
+
+                return a / b;
+            } catch (error) {
+                return error.message;
+            }
+        }
+
+        function hitungpembagian() {
+            // Ambil nilai dari input
+            const number1 = document.getElementById("number1").value;
+            const number2 = document.getElementById("number2").value;
+
+            // Hitung hasil pembagian
+            const result = bagiduaangka(number1, number2);
+
+            // Tampilkan hasil di halaman HTML
+            document.getElementById("result").textContent = "Hasil: " + result;
+        }
+    </script>
+</body>
+</html>
+

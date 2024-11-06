@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan Iterasi Array</title>
+</head>
+<body>
+    <h1>Latihan Iterasi Array</h1>
+    <p id="output"></p>
+
+    <script>
+        // Array of names
+        const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
+        let output = "";
+
+        // Loop through the array and print each name in uppercase
+        for (let i = 0; i < people.length; i++) {
+            output += people[i].toUpperCase() + "<br>";
+        }
+
+        // Display the output in the HTML
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>
